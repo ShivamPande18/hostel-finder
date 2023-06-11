@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: 0.1s all ease-in-out;
+    font-family: 'Inter', sans-serif;
+}
+
+li{
+    list-style: none;
+}
+
+.navbar{
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    background-color: whitesmoke;
+}
+
+.navbar ul{
+    width: 100%;
+}
+
+.navbar li{
+    float: right;
+    padding: 10px 10px;
+}
+
+.navbar li:hover{
+    background-color: #ff3155;
+    color: white;
+    cursor: pointer;
+}
+
+.navbarLogo{
+    float: left !important;
+}
+
+.headImg{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.heroCover{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.heroTxt{
+    font-weight: 200;
+    font-size: 70px;
+    margin-bottom: 20px;
+}
+
+.heroDropCont{
+    display: flex;
+    flex-direction: row;
+}
+
+.heroDropCont h1{
+    background-color: black;
+    padding: 5px 20px;
+    font-size: 35px;
+    font-weight: 500;
+}
+
+.heroDropCont h2{
+    padding: 5px 20px;
+    font-size: 35px;
+    font-weight: 500;
+}
+
+.heroDropCont h2:hover{
+    cursor: pointer;
+}
+
+.mainCont{
+    background-color: whitesmoke;
+    max-width: 100vw;
+    margin: 0 auto;
+    display: grid;
+    gap: 1px;
+    grid-template-columns: repeat(3, minmax(200px, 1fr)); 
+}
+
+.card{
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    width: fit-content;
+    margin: 20px;
+    position: relative;
+}
+
+.card:hover{
+    cursor: pointer;
+}
+
+/* .card:hover+.card button{
+    display: block;
+} */
+
+.card button{
+    display: none;
+    border: none;
+    border-radius: 50px;
+    padding: 2px 5px;
+    background-color: rgba(255, 255, 255, 0.863);
+}
+
+.leftSlide{
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-80%);
+}
+
+.rightSlide{
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-80%);
+}
+
+.card button:hover{
+    padding: 2.5px 5.5px;
+    cursor: pointer;
+}
+
+.card img{
+    border-radius: 10px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.cardDataTxt{
+    /* background-color: red; */
+    /* margin: 10px; */
+    font-size: 10px;
+    overflow: hidden;
+}
+
+.cardData h1{
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.cardData h2{
+    font-weight: 300;
+    font-size: 10px;
+}
+
+.cardData button{
+    width: 100%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: blue;
+    border: 1px solid blue;
+    padding: 5px 0;
+    color: white;
+    font-size: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.filterBar{
+    padding: 5px 10px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.filterBar input{
+    padding: 5px 20px;
+    width: 70vw;
+}
+
+.filterBtn{
+    width: 20vw;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.filterBtn:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.filterOverlay{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(0, 0, 0, 0.438);
+    height: 100vh;
+    width: 100vw;
+}
+
+.filterCont{
+    background-color: white;
+    height: 90vh;
+    width: 80vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 5px;
+}
+
+.filterContHeader{
+    width: 100%;
+    position: fixed;
+    font-weight: bold;
+    border-bottom: 1px solid rgb(218, 216, 216);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.filterContBodyWrapper{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.filterContBody{
+    height: 68vh;
+    overflow: scroll;
+    padding: 10px;
+}
+
+.filterContBody h1{
+    font-size: 20px;
+}
+
+.filterPricePic{
+    background-color: whitesmoke;
+    padding: 15px 5px;
+    margin-top: 10px;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 20px;
+    overflow-x: scroll;
+}
+
+.filterPriceBtnActive{
+    background-color: #ff3155;
+    border: 1px solid #ff3155;
+    border-radius: 5px;
+    padding: 5px 20px;
+    color: white;
+}
+
+.filterPriceBtn{
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px 20px;
+    color: black;
+}
+
+.filterTypePic{
+    margin-top: 10px;
+    padding: 15px 5px;
+    background-color: whitesmoke;
+    overflow-x: scroll;
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 20px;
+}
+
+.filterTypePic button{
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding:20px
+}
+
+.filterSep{
+    border-top: 1px solid #ccc;
+    margin: 20px 10px;
+}
+
+.filterContFooter{
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+    font-weight: bold;
+    border-top: 1px solid rgb(218, 216, 216);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filterContFooter p{
+    text-decoration: underline;
+}
+
+.filterContFooter button{
+    padding: 5px 10px;
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.filterContFooter button:hover{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.listCont li{
+    padding: 5px;
+}
+
+.list{
+    padding: 5px;
+    border: 1px grey solid;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px #888888;
+}
+
+.list h1{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.list h3{
+    font-size: 15px;
+}
+
+.list p{
+    font-size: 10px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 33vw 33vw 33vw;
+    grid-auto-flow: column;
+}
+
+.item1{
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.item2{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    height: 100%;
+    /* background-color: red; */
+    display: grid;
+}
+
+.grid img{
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+}
+
+.listBtnMore{
+    background-color: #ff3155;
+    border: 1px solid #ff3155;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.listBtnContact{
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-left: 5px;
+}
